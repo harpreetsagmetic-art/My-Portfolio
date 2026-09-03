@@ -7,7 +7,9 @@ export default function Contact() {
       className="px-6 md:px-16 py-28 border-t border-border"
     >
       <div className="max-w-5xl mx-auto text-center">
-        <p className="font-mono text-sm text-amber mb-4">06 — let's build something</p>
+        <p className="font-mono text-xs tracking-wide text-amber mb-4 uppercase">
+          07 — Let&apos;s Work Together
+        </p>
         <h2 className="font-display font-bold text-3xl sm:text-4xl text-offwhite max-w-2xl mx-auto leading-tight">
           Have a store, plugin, or automation that needs shipping?
         </h2>
@@ -16,17 +18,20 @@ export default function Contact() {
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
           <a
             href={`mailto:${profile.email}`}
-            className="font-mono text-sm px-6 py-3 bg-amber text-ink font-medium rounded-sm hover:bg-offwhite transition-colors"
+            className="font-display text-base font-semibold px-7 py-3.5 bg-amber text-ink rounded-sm hover:bg-offwhite transition-colors"
           >
-            {profile.email}
+            Email Me
           </a>
           <a
             href={`tel:${profile.phone.replace(/\s/g, "")}`}
-            className="font-mono text-sm px-6 py-3 border border-border text-offwhite rounded-sm hover:border-amber hover:text-amber transition-colors"
+            className="font-display text-base font-semibold px-7 py-3.5 border border-border text-offwhite rounded-sm hover:border-amber hover:text-amber transition-colors"
           >
-            {profile.phone}
+            Call Me
           </a>
         </div>
+        <p className="font-mono text-sm text-muted mt-6">
+          {profile.email} · {profile.phone}
+        </p>
       </div>
     </section>
   );
